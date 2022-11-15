@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FMB Admin - Dashboard</title>
+    <title>FMB Admin - Pesanan</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url('assets/Frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
@@ -45,7 +45,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url(); ?>admin/pesanan">
+                <a class="nav-link" href="<?= base_url(); ?>admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -70,7 +70,7 @@
                         <h6 class="collapse-header">Kelola Data:</h6>
                         <a class="collapse-item" href="<?= base_url(); ?>admin/pesanan ">Pesanan</a>
                         <a class="collapse-item" href="<?= base_url(); ?>admin/barang ">Barang</a>
-                        <a class="collapse-item" href="<?= base_url(); ?>admin/user">User</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>admin/user ">User</a>
                     </div>
                 </div>
             </li>
@@ -177,162 +177,116 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Pesanan</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Cetak</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> -->
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Produksi</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> -->
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <!-- <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 0%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Packing</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-6">
+                        <h1 class="h3 mb-0 text-gray-800">Pesanan</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
 
                     <!-- Table pesanan -->
-                    <div class="container mt-6">
-                        <h5>Data Pesanan</h5>
-                        <table class="table table-striped">
-                            <thead class="table-light">
-                                <th>No</th>
-                                <th>ID Pesan</th>
-                                <th>Username</th>
-                                <th>Barang</th>
-                                <th>Total</th>
-                                <th>Status Cetak</th>
-                                <th>Status Produksi</th>
-                                <th>Status Packing</th>
-                            </thead>
-                            <tbody class="table-light">
-                                <?php
-                                $no = 1;
-                                foreach ($data_dash as $data) {
-                                ?>
-                                <td><?php echo $no++ ?></td>
-                                <td><?php echo $data->ID_PESAN; ?></td>
-                                <td><?php echo $data->USERNAME; ?></td>
-                                <td><?php echo $data->NM_BARANG; ?></td>
-                                <td><?php echo $data->TOTAL_BAYAR; ?></td>
-                                <td><?php echo $data->ADM_STATUS; ?></td>
-                                <td><?php echo $data->PRODUKSI_STATUS; ?></td>
-                                <td><?php echo $data->PACK_STATUS; ?></td>
-                            </tbody>
-                            <?php } ?>
-                        </table>
-                    </div>
+                    <div class="table mb-8">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            Tabel Pesanan
+                        </div>
+                        <div>
+                            <table class="table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Kode Transaksi</th>
+                                        <th>Tanggal</th>
+                                        <th>Username</th>
+                                        <th>Total</th>
+                                        <th>Admin St</th>
+                                        <th>Produksi St</th>
+                                        <th>Packing St</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WMT0001</td>
+                                        <td>2022-02-07</td>
+                                        <td>13.00</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
 
+                                        <td>Belum Bayar</td>
+                                        <td>
+                                            <a href="<?php echo base_url(); ?>purchasing/edit/"
+                                                class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>purchasing/delete/"
+                                                class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WMT0001</td>
+                                        <td>2022-02-07</td>
+                                        <td>13.00</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+
+                                        <td>Belum Bayar</td>
+                                        <td>
+                                            <a href="<?php echo base_url(); ?>purchasing/edit/"
+                                                class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>purchasing/delete/"
+                                                class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WMT0001</td>
+                                        <td>2022-02-07</td>
+                                        <td>13.00</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+
+                                        <td>Belum Bayar</td>
+                                        <td>
+                                            <a href="<?php echo base_url(); ?>purchasing/edit/"
+                                                class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>purchasing/delete/"
+                                                class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WMT0001</td>
+                                        <td>2022-02-07</td>
+                                        <td>13.00</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>Belum Bayar</td>
+                                        <td>
+                                            <a href="<?php echo base_url(); ?>purchasing/edit/"
+                                                class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>purchasing/delete/"
+                                                class="btn btn-danger">Hapus</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <a href="javascript:void(0);" class="btn btn-success" data-toggle="modal"
+                                    data-target="#addUserModal"><span class="fa fa-plus"></span> Add New</a>
+                            </div><br>
+                        </div>
+                    </div>
                     <!-- End tabel pesanan -->
 
-                    <div>
-                        <a href="javascript:void(0);" class="btn btn-success" data-toggle="modal"
-                            data-target="#addUserModal"><span class="fa fa-plus"></span> Add Scan</a>
-                    </div><br>
                 </div>
                 <!-- /.container-fluid -->
 
