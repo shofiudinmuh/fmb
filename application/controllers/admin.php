@@ -27,12 +27,27 @@ class admin extends CI_Controller
 		$this->db->from('table_dashboard_admin');
 		$query = $this->db->get();
 		$data['data_dash'] = $query->result();
-		$this->load->view('Admin/index', $data);
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/dashboard', $data);
+		$this->load->view('admin-partials/footer');
 	}
 
 	public function pesanan()
 	{
-		$this->load->view('Admin/pesanan');
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('table_pesanan');
+		$this->db->select('*');
+		$this->db->from('table_pesanan');
+		$query = $this->db->get();
+		$data['data_pesan'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/pesanan', $data);
+		$this->load->view('admin-partials/footer');
 	}
 
 	public function barang()
@@ -57,8 +72,8 @@ class admin extends CI_Controller
 		// print_r($data['login']);
 		if (count((array)$data['login']) > 0) {
 			$this->session->set_userdata('logged_in', $data['login']);
-			// print_r($data['login']);
-			$akses = $data['login']->akses;
+			print_r($data['login']);
+			$akses = $data['login']->AKSES;
 			switch ($akses) {
 				case 'admin':
 					redirect('admin/dashboard');

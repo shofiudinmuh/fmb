@@ -13,8 +13,10 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url('assets/Frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url("assets/Frontend/img/logo.jpg"); ?>">
 
@@ -36,17 +38,19 @@
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
                             <div class="col-lg-12 justify-content-center">
                                 <div class="p-5">
-                                    <form action="<?php echo base_url('dashboard/user');?>" method="POST">
+                                    <form action="<?php echo base_url('admin/dashboard'); ?>" method="POST">
                                         <div class="form-group">
-					                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                                            <input type="text" class="form-control" id="username" name="username"
+                                                placeholder="Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                placeholder="Password">
                                         </div>
                                         <input class="btn btn-primary" type="submit" value="Login">
                                     </form>
                                     <hr>
-                                 </div>
+                                </div>
                             </div>
                         </div>
                     </div>
