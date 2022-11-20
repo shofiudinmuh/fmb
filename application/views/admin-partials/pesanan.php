@@ -22,11 +22,11 @@
                                  <th>Nama</th>
                                  <th>Quote</th>
                              </thead>
+                             <?php
+                                $no = 1;
+                                foreach ($data_pesan as $data) {
+                                ?>
                              <tbody class="table-light">
-                                 <?php
-                                    $no = 1;
-                                    foreach ($data_pesan as $data) {
-                                    ?>
                                  <td><?php echo $no++ ?></td>
                                  <td><?php echo $data->ID_PESAN; ?></td>
                                  <td><?php echo $data->TGL_PESAN; ?></td>

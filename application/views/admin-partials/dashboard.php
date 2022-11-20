@@ -97,7 +97,7 @@
                  </div>
                  <div class="card-body">
                      <div class="table-responsive">
-                         <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                         <table class="table table-bordered text-center" id="dataTable">
                              <thead class="table-light">
                                  <th>No</th>
                                  <th>ID Pesan</th>
@@ -108,19 +108,19 @@
                                  <th>Status Produksi</th>
                                  <th>Status Packing</th>
                              </thead>
-                             <tbody class="table-light">
-                                 <?php
-                                    $no = 1;
-                                    foreach ($data_dash as $data) {
-                                    ?>
+                             <?php
+                                $no = 1;
+                                foreach ($data_dash as $data) {
+                                ?>
+                             <tbody class="table-light table-bordered text-center">
                                  <td><?php echo $no++ ?></td>
                                  <td><?php echo $data->ID_PESAN; ?></td>
                                  <td><?php echo $data->USERNAME; ?></td>
                                  <td><?php echo $data->NM_BARANG; ?></td>
                                  <td><?php echo $data->TOTAL_BAYAR; ?></td>
-                                 <td><?php echo $data->ADM_STATUS; ?></td>
+                                 <td><?php echo $data->ADMIN_STATUS; ?></td>
                                  <td><?php echo $data->PRODUKSI_STATUS; ?></td>
-                                 <td><?php echo $data->PACK_STATUS; ?></td>
+                                 <td><?php echo $data->PACKING_STATUS; ?></td>
                              </tbody>
                              <?php } ?>
                          </table>

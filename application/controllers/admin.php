@@ -50,9 +50,84 @@ class admin extends CI_Controller
 		$this->load->view('admin-partials/footer');
 	}
 
-	public function barang()
+	public function produk()
 	{
-		$this->load->view('Admin/barang');
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('barang');
+		$this->db->select('*');
+		$this->db->from('barang');
+		$query = $this->db->get();
+		$data['produk'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/barang', $data);
+		$this->load->view('admin-partials/footer');
+	}
+
+	public function kelola_user()
+	{
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('user');
+		$this->db->select('*');
+		$this->db->from('user');
+		$query = $this->db->get();
+		$data['user'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/kelola-user', $data);
+		$this->load->view('admin-partials/footer');
+	}
+
+	public function marketplace()
+	{
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('marketplace');
+		$this->db->select('*');
+		$this->db->from('marketplace');
+		$query = $this->db->get();
+		$data['marketplace'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/marketplace', $data);
+		$this->load->view('admin-partials/footer');
+	}
+
+	public function warna()
+	{
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('warna');
+		$this->db->select('*');
+		$this->db->from('warna');
+		$query = $this->db->get();
+		$data['warna'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/warna', $data);
+		$this->load->view('admin-partials/footer');
+	}
+
+	public function varian()
+	{
+		$this->load->helper("url");
+		$this->load->database();
+		$query = $this->db->get('varian');
+		$this->db->select('*');
+		$this->db->from('varian');
+		$query = $this->db->get();
+		$data['varian'] = $query->result();
+		$this->load->view('admin-partials/header');
+		$this->load->view('admin-partials/side-bar');
+		$this->load->view('admin-partials/top-bar');
+		$this->load->view('admin-partials/varian', $data);
+		$this->load->view('admin-partials/footer');
 	}
 
 	public function produksi()
@@ -65,7 +140,7 @@ class admin extends CI_Controller
 		echo "halaman packing";
 	}
 
-	public function user()
+	public function login()
 	{
 		$this->load->model('Login_model');
 		$data['login'] = $this->Login_model->login();

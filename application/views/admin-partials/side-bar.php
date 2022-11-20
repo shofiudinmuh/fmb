@@ -38,8 +38,10 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Kelola Data:</h6>
                 <a class="collapse-item" href="<?= base_url(); ?>admin/pesanan ">Pesanan</a>
-                <a class="collapse-item" href="<?= base_url(); ?>admin/barang ">Barang</a>
-                <a class="collapse-item" href="<?= base_url(); ?>admin/user">User</a>
+                <a class="collapse-item" href="<?= base_url(); ?>admin/produk ">Produk</a>
+                <a class="collapse-item" href="<?= base_url(); ?>admin/warna ">Warna</a>
+                <a class="collapse-item" href="<?= base_url(); ?>admin/varian ">Varian</a>
+                <a class="collapse-item" href="<?= base_url(); ?>admin/kelola_user">User</a>
                 <a class="collapse-item" href="<?= base_url(); ?>admin/marketplace">Marketplace</a>
             </div>
         </div>

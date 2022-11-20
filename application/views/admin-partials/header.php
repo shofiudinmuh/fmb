@@ -16,6 +16,8 @@
     <link href="<?php echo base_url('assets/Frontend/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet"
         type="text/css">
     <!-- Custom styles for this pages -->
+    <link href="<?php echo base_url('assets/Frontend/vendor/dataTables/dataTables.bootstrap4.css'); ?>"
+        rel="stylesheet">
     <link href="<?php echo base_url('assets/Frontend/vendor/dataTables/dataTables.bootstrap4.min.css'); ?>"
         rel="stylesheet">
     <link
